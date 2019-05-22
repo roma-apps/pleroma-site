@@ -10,6 +10,9 @@
   <meta name="description" content="{{ .Site.Params.meta.description }}">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=5.0,viewport-fit=cover">
   <meta name="theme-color" content="#ffaf6d">
+  {{/*  Manifest  */}}
+  {{ $manifest := resources.Get "manifest.json" }}
+  <link rel="manifest" href="{{ $manifest.Permalink }}">
 
   <!-- Fonts -->
   {{ $ale2 := resources.Get "fonts/Alegreya-Regular.woff2" }}
