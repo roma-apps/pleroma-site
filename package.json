@@ -1,0 +1,43 @@
+{
+  "name": "pleroma-site",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "gulp critical && concurrently \"hugo serve --disableFastRender\" \"gulp watch\"",
+    "build": "gulp critical && hugo -e production && gulp fixHugo",
+    "development": "gulp critical && hugo -e development && gulp fixHugo",
+    "clean": "rm -rf public resources",
+    "clean-node": "rm -rf node_modules package-lock.json",
+    "fix": "eslint --fix assets/**/*.js",
+    "format": "prettier --write assets/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://fourjuaneight@github.com/roma-apps/pleroma-site.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roma-apps/pleroma-site/issues"
+  },
+  "homepage": "https://github.com/roma-apps/pleroma-site#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "concurrently": "^4.1.0",
+    "cssnano": "^4.1.4",
+    "eslint-plugin-react-hooks": "^1.5.0",
+    "gulp": "^4.0.0",
+    "gulp-concat-util": "^0.5.5",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.1",
+    "html-minifier": "^3.5.21",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-calc": "^7.0.1",
+    "postcss-cli": "^6.0.0",
+    "postcss-custom-properties": "^8.0.9",
+    "postcss-import": "^12.0.1",
+    "postcss-mixins": "^6.2.0",
+    "postcss-nested": "^4.1.0",
+    "postcss-simple-vars": "^5.0.1"
+  }
+}

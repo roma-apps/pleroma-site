@@ -1,0 +1,27 @@
+baseURL = "/"
+enableEmoji = "true"
+enableRobotsTXT = "true"
+languageCode = "en-us"
+title = "Pleroma"
+
+FootnoteReturnLinkContents = "↩"
+
+[permalinks]
+  blog = "/:title/"
+
+[author]
+  name = ""
+  dev = "Juan Villela"
+  devEmail = "hello@juanvillela.me"
+
+[blackfriday]
+  hrefTargetBlank = true
+  plainIDAnchors = true
+
+[params]
+  description = ""
+  social = ""
+  OpenLinksInNewWindow = true
+
+[outputs]
+  home = ["html"]
