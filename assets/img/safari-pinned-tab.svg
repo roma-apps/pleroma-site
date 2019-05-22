@@ -1,0 +1,13 @@
+<svg width="100%" height="100%" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+  <g id="logo" transform="matrix(2.69461,0,0,2.69461,-179.168,-177.82)">
+    <g id="side" transform="matrix(0.371111,0,0,0.371111,66.4911,65.9911)">
+      <path d="M230.413,132.06C230.414,93.392 261.806,62 300.473,62L454.066,62L454.066,962L230.413,962L230.413,132.06Z" style="fill:rgb(251,164,87);fill-rule:nonzero;"/>
+    </g>
+    <g id="top" transform="matrix(0.371111,0,0,0.371111,66.4911,65.9911)">
+      <path d="M567.239,512L567.239,62L793.587,62L793.587,441.94L793.587,441.94C793.586,480.608 762.194,512 723.527,512L567.239,512Z" style="fill:rgb(251,164,87);"/>
+    </g>
+    <g id="bottom" transform="matrix(0.371111,0,0,0.371111,66.4911,65.9911)">
+      <path d="M567.239,962L567.239,738.347L793.587,738.347L793.587,891.94L793.587,891.94C793.586,930.608 762.194,962 723.527,962L567.239,962Z" style="fill:rgb(251,164,87);"/>
+    </g>
+  </g>
+</svg>
