@@ -1,0 +1,43 @@
+// Media Queries
+@mixin media-query-min($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+ @mixin media-query-max($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+ @mixin range($max,$min) {
+  @media screen and (max-width: $max) and (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin transition($property, $timing: 200ms) {
+  transition: $property $timing ease-in-out;
+}
+
+@mixin link-hover($color, $timing: 200ms) {
+  @extend %relative;
+
+  &:before {
+    @extend %absolute;
+
+    background: $color;
+    bottom: -0.5vh;
+    content: '';
+    display: block;
+    height: 3px;
+    left: 0;
+    transition: width $timing ease;
+    width: 0%;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}

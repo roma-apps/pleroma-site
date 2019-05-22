@@ -1,0 +1,137 @@
+// Reset
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  @include transition(font-size);
+
+  box-sizing: border-box;
+  font-size: 100%;
+  -webkit-overflow-scrolling: touch;
+
+  @include media-query-max(600px) {
+    font-size: 90%;
+  }
+}
+
+
+body {
+  @extend %relative;
+
+  color: $font;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+
+a,
+article,
+blockquote,
+body,
+code,
+div,
+em,
+figcaption,
+figure,
+h1,
+h2,
+h3,
+hr,
+html,
+iframe,
+img,
+label,
+nav,
+p,
+pre,
+section,
+small,
+span,
+strong,
+summary,
+sup,
+time,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+article a,
+a:active,
+a:hover,
+a:visited,
+hr {
+  color: $brand;
+}
+
+footer,
+header,
+main {
+  @extend %full-width;
+  @extend %margin-center;
+
+  padding: 0;
+}
+
+blockquote {
+  border-left: 1px solid $brand;
+  padding-left: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+  margin: 10px 0 15px;
+}
+
+h1 {
+  font-size: 4.5rem;
+  line-height: 4.75rem;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 3.25rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+}
+
+img,
+svg,
+video {
+  @extend %full-width;
+
+  height: auto;
+}
+
+[hidden],
+.hidden {
+  display: none !important;
+}
+
+[disabled] {
+  cursor: not-allowed;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
