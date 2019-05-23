@@ -1,0 +1,8 @@
+<header class="header">
+  {{ $logo := resources.Get "img/." }}
+  <img src="{{ $logo.Permalink }}" alt="Pleroma Logo" class="header__logo"/>
+  <div class="header__brand">
+    <h1 class="header__title">{{ .Site.Title }}</h1>
+    <small class="header__subtext">πλήρωμα</small>
+  </div>
+</header>
