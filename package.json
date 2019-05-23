@@ -6,9 +6,7 @@
     "build": "gulp critical && hugo -e production && gulp fixHugo",
     "development": "gulp critical && hugo -e development && gulp fixHugo",
     "clean": "rm -rf public resources",
-    "clean-node": "rm -rf node_modules package-lock.json",
-    "fix": "eslint --fix assets/**/*.js",
-    "format": "prettier --write assets/**/*.js"
+    "clean-node": "rm -rf node_modules package-lock.json"
   },
   "repository": {
     "type": "git",
