@@ -4,6 +4,7 @@ For a more comprehensive help regarding how to use Hugo, you can check out their
 ```
 |--assets           // Files that will pass through the asset pipeline
 |  |--css           // Sass files are compiled, minified and autoprefixed
+|  |--fonts           // Font files
 |  |--img           // Image, favicon, iOS webclip, and OpenGraph icon files
 |--content          // Pages and collections
 |--layouts          // This is where all templates go
@@ -11,8 +12,6 @@ For a more comprehensive help regarding how to use Hugo, you can check out their
 |  |--partials      // This is where includes live
 |  |--shortcodes    // This is where shortcodes live
 |  |--index.html    // The index page
-|--static           // Files in here end up in the public folder
-|  |--fonts           // Font files
 ```
 
 ## Setup
