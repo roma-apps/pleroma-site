@@ -1,0 +1,8 @@
+.main__section {
+  @extend %full-width;
+
+  background-color: $bg;
+  border-top: 2px solid $brand;
+  margin: 0 0 2rem;
+  padding: 1rem;
+}
