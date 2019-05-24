@@ -8,15 +8,20 @@
   <meta name="description" content="{{ .Site.Params.meta.description }}">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=5.0,viewport-fit=cover">
   <meta name="theme-color" content="#ffaf6d">
+
   {{/*  Manifest  */}}
   {{ $manifest := resources.Get "manifest.json" }}
   <link rel="manifest" href="{{ $manifest.Permalink }}">
 
+  {{/*  Background Image  */}}
+  {{ $bg := resources.Get "img/pleroma-background.jpg" }}
+  <link rel="preload" href="{{ $bg.Permalink }}" as="image">
+
   {{/* Fonts  */}}
-  {{ $ale2 := resources.Get "fonts/Alegreya-Regular.woff2" }}
-  <link rel="preload" href="{{ $ale2.Permalink }}" as="font" type="font/woff2" crossorigin>
-  {{ $ale := resources.Get "fonts/Alegreya-Regular.woff" }}
-  <link rel="preload" href="{{ $ale.Permalink }}" as="font" type="font/woff" crossorigin>
+  {{ $merri2 := resources.Get "fonts/Merriweather-Regular.woff2" }}
+  <link rel="preload" href="{{ $merri2.Permalink }}" as="font" type="font/woff2" crossorigin>
+  {{ $merri := resources.Get "fonts/Merriweather-Regular.woff" }}
+  <link rel="preload" href="{{ $merri.Permalink }}" as="font" type="font/woff" crossorigin>
   {{ $robo2 := resources.Get "fonts/Roboto-Regular.woff2" }}
   <link rel="preload" href="{{ $robo2.Permalink }}" as="font" type="font/woff2" crossorigin>
   {{ $robo := resources.Get "fonts/Roboto-Regular.woff" }}

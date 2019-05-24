@@ -1,32 +1,4 @@
 // Reset
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-html {
-  @include transition(font-size);
-
-  box-sizing: border-box;
-  font-size: 100%;
-  -webkit-overflow-scrolling: touch;
-
-  @include media-query-max(600px) {
-    font-size: 90%;
-  }
-}
-
-
-body {
-  @extend %relative;
-
-  color: $font;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1em;
-  line-height: 1.2em;
-}
-
-
 a,
 article,
 blockquote,
@@ -73,7 +45,7 @@ footer,
 header,
 main {
   @extend %full-width;
-  @extend %margin-center;
+  @extend %margin-horizontal-center;
 
   padding: 0;
 }
@@ -113,6 +85,40 @@ video {
   @extend %full-width;
 
   height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  @include transition(font-size);
+
+  box-sizing: border-box;
+  font-size: 100%;
+  -webkit-overflow-scrolling: touch;
+
+  @include media-query-max(600px) {
+    font-size: 90%;
+  }
+}
+
+
+body {
+  @extend %relative;
+
+  background: $bg url('img/pleroma-background.jpg') no-repeat;
+  background-size: cover;
+  color: $font;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: 190px 0 130px;
+  
+  @include media-query-max(600px) {
+    padding: 30vw 0 25vw;
+  }
 }
 
 [hidden],

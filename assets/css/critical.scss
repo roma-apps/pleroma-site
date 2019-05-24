@@ -4,3 +4,13 @@
 @import 'reset';
 @import 'fonts';
 @import 'header';
+
+.main {
+  @extend %content-flex-start;
+  @extend %flex;
+  @extend %flex-column;
+  @extend %items-center;
+  @extend %margin-horizontal-center;
+
+  max-width: 45rem;
+}
