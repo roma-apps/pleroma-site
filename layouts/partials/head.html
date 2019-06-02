@@ -7,7 +7,7 @@
   <meta name="developer" content="{{ .Site.Author.dev }} - {{ .Site.Author.devEmail }}">
   <meta name="description" content="{{ .Site.Params.meta.description }}">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=5.0,viewport-fit=cover">
-  <meta name="theme-color" content="#ffaf6d">
+  <meta name="theme-color" content="#6CB23D">
 
   {{/*  Manifest  */}}
   {{ $manifest := resources.Get "manifest.json" }}
@@ -18,18 +18,18 @@
   <link rel="preload" href="{{ $bg.Permalink }}" as="image">
 
   {{/* Fonts  */}}
-  {{ $merri2 := resources.Get "fonts/Merriweather-Regular.woff2" }}
-  <link rel="preload" href="{{ $merri2.Permalink }}" as="font" type="font/woff2" crossorigin>
-  {{ $merri := resources.Get "fonts/Merriweather-Regular.woff" }}
-  <link rel="preload" href="{{ $merri.Permalink }}" as="font" type="font/woff" crossorigin>
-  {{ $robo2 := resources.Get "fonts/Roboto-Regular.woff2" }}
-  <link rel="preload" href="{{ $robo2.Permalink }}" as="font" type="font/woff2" crossorigin>
-  {{ $robo := resources.Get "fonts/Roboto-Regular.woff" }}
-  <link rel="preload" href="{{ $robo.Permalink }}" as="font" type="font/woff" crossorigin>
-  {{ $robob2 := resources.Get "fonts/Roboto-Bold.woff2" }}
-  <link rel="preload" href="{{ $robob2.Permalink }}" as="font" type="font/woff2" crossorigin>
-  {{ $robob := resources.Get "fonts/Roboto-Bold.woff" }}
-  <link rel="preload" href="{{ $robob.Permalink }}" as="font" type="font/woff" crossorigin>
+  {{ $tit2 := resources.Get "fonts/Titillium-Regular.woff2" }}
+  <link rel="preload" href="{{ $tit2.Permalink }}" as="font" type="font/woff2" crossorigin>
+  {{ $tit := resources.Get "fonts/Titillium-Regular.woff" }}
+  <link rel="preload" href="{{ $tit.Permalink }}" as="font" type="font/woff" crossorigin>
+  {{ $titi2 := resources.Get "fonts/Titillium-Italic.woff2" }}
+  <link rel="preload" href="{{ $titi2.Permalink }}" as="font" type="font/woff2" crossorigin>
+  {{ $titi := resources.Get "fonts/Titillium-Italic.woff" }}
+  <link rel="preload" href="{{ $titi.Permalink }}" as="font" type="font/woff" crossorigin>
+  {{ $titb2 := resources.Get "fonts/Titillium-Bold.woff2" }}
+  <link rel="preload" href="{{ $titb2.Permalink }}" as="font" type="font/woff2" crossorigin>
+  {{ $titb := resources.Get "fonts/Titillium-Bold.woff" }}
+  <link rel="preload" href="{{ $titb.Permalink }}" as="font" type="font/woff" crossorigin>
 
   {{/* Critical  */}}
   {{ partial "critical.html" . }}
@@ -62,7 +62,7 @@
   {{ $ati180 := resources.Get "img/apple-touch-icon-180x180.png" }}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ $ati180.Permalink }}">
   {{ $spt := resources.Get "img/safari-pinned-tab.svg" | minify }}
-  <link rel="mask-icon" color="#ffaf6d" href="{{ $spt.Permalink }}">
+  <link rel="mask-icon" color="#6CB23D" href="{{ $spt.Permalink }}">
 
   {{/* Android Chrome Icon  */}}
   {{ $i128 := resources.Get "img/icon-128x128.png" }}

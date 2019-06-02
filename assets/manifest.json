@@ -3,23 +3,23 @@
   "name": "Pleroma",
   "icons": [
     {
-      "src": "/img/icon-128x128.png",
+      "src": "/icons/icon-128x128.png",
       "type": "image/png",
       "sizes": "128x128"
     },
     {
-      "src": "/img/icon-192x192.png",
+      "src": "/icons/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/img/icon-512x512.png",
+      "src": "/icons/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "display": "standalone",
-  "theme_color": "#ffaf6d",
-  "background_color": "#ffaf6d",
+  "theme_color": "#6CB23D",
+  "background_color": "#6CB23D",
   "start_url": "/"
 }
