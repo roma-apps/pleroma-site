@@ -1,2 +1,21 @@
 <header class="header">
+  <div class="header__inner">
+    <a href="{{ .Site.BaseURL }}" class="header__home-link">
+      {{ $logo := resources.Get "img/logo.png" }}
+      <img src="{{ $logo.Permalink }}" alt="Pleroma Logo" class="header__logo"/>
+      <span class="header__name">{{ .Site.Title }}</span>.com
+    </a>
+    <label for="header__toggle" class="header__hamburger">
+      <div class="hambuerger__item hambuerger__item--top"></div>
+      <div class="hambuerger__item hambuerger__item--meat"></div>
+      <div class="hambuerger__item hambuerger__item--bottom"></div>
+    </label>
+    <input type="checkbox" id="header__toggle" aria-hidden="true">
+    <nav class="header__nav">
+      <a href='{{ "#mobile" | relURL }}' class="header__link">Mobile Apps</a>
+      <a href='{{ "#desktop" | relURL }}' class="header__link">Desktop Apps</a>
+      <a href='{{ "#contact" | relURL }}' class="header__link">Contact Us</a>
+      <a href='{{ "privacy" | relURL }}' class="header__link">Privacy Policy</a>
+    </nav>
+  </div>
 </header>
