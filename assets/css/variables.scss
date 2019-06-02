@@ -1,7 +1,8 @@
 // Colors
-$bg: #10181e;
-$brand: #ffaf6d;
-$font: #b9b9ba;
+$bg: hsl(0, 0%, 100%);
+$brand: hsl(96, 49%, 47%);
+$font: hsl(0, 0%, 9%);
+$meta: hsl(0, 0%, 97%);
 
 // SHADOWS
-$shadow: 0 1px 6px 0 rgba($font,0.3);
+$shadow: 0 0 30px rgba($font,0.1);

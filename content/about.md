@@ -1,4 +1,0 @@
----
-title: About
-drafts: true
----

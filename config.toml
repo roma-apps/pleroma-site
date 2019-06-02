@@ -3,6 +3,7 @@ enableEmoji = "true"
 enableRobotsTXT = "true"
 languageCode = "en-us"
 title = "Pleroma"
+subtitle = "Apps for Pleroma"
 
 FootnoteReturnLinkContents = "↩"
 disableKinds = ["taxonomy", "taxonomyTerm"]
@@ -12,16 +13,13 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [author]
   name = ""
-  dev = "Juan Villela"
-  devEmail = "hello@juanvillela.me"
 
 [blackfriday]
   hrefTargetBlank = true
   plainIDAnchors = true
 
 [params]
-  description = ""
-  social = ""
+  description = "Pleroma is a free, federated social networking server built on open protocols. It is compatible with GNU Social, Mastodon, and many other ActivityPub and OStatus implementations."
   OpenLinksInNewWindow = true
 
 [outputs]
