@@ -1,0 +1,11 @@
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__copyright">&copy; {{ time.Now.Format "2006" }} {{ .Site.Copyright }}</p>
+    <nav class="footer__nav">
+      <a href="{{ .Site.BaseURL }}#mobile" class="footer__link">Mobile Apps</a>
+      <a href="{{ .Site.BaseURL }}#desktop" class="footer__link">Desktop Apps</a>
+      <a href="{{ .Site.BaseURL }}#contact" class="footer__link">Contact Us</a>
+      <a href='{{ "privacy" | absURL }}' class="footer__link">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>

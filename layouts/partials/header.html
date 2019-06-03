@@ -5,17 +5,20 @@
       <img src="{{ $logo.Permalink }}" alt="Pleroma Logo" class="header__logo"/>
       <span class="header__name">{{ .Site.Title }}</span>.com
     </a>
-    <label for="header__toggle" class="header__hamburger">
-      <div class="hambuerger__item hambuerger__item--top"></div>
-      <div class="hambuerger__item hambuerger__item--meat"></div>
-      <div class="hambuerger__item hambuerger__item--bottom"></div>
+    <input type="checkbox" role="button" aria-haspopup="true" aria-hidden="true" id="header__toggle" data-opens-menu>
+    <label for="header__toggle" class="header__hamburger" data-opens-menu>
+      <div aria-hidden="true" class="hamburger__item hamburger__item--top"></div>
+      <div aria-hidden="true" class="hamburger__item hamburger__item--meat"></div>
+      <div aria-hidden="true" class="hamburger__item hamburger__item--bottom"></div>
+      <span class="sr-only">Menu</span>
+      <span class="sr-only expanded-text">expanded</span>
+      <span class="sr-only collapsed-text">collapsed</span>
     </label>
-    <input type="checkbox" id="header__toggle" aria-hidden="true">
-    <nav class="header__nav">
-      <a href='{{ "#mobile" | relURL }}' class="header__link">Mobile Apps</a>
-      <a href='{{ "#desktop" | relURL }}' class="header__link">Desktop Apps</a>
-      <a href='{{ "#contact" | relURL }}' class="header__link">Contact Us</a>
-      <a href='{{ "privacy" | relURL }}' class="header__link">Privacy Policy</a>
+    <nav role="menu" class="header__nav">
+      <a href="{{ .Site.BaseURL }}#mobile" class="header__link">Mobile Apps</a>
+      <a href="{{ .Site.BaseURL }}#desktop" class="header__link">Desktop Apps</a>
+      <a href="{{ .Site.BaseURL }}#contact" class="header__link">Contact Us</a>
+      <a href='{{ "privacy" | absURL }}' class="header__link">Privacy Policy</a>
     </nav>
   </div>
 </header>

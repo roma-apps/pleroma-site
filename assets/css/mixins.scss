@@ -22,6 +22,7 @@
 }
 
 @mixin link-hover($color, $timing: 200ms) {
+  @extend %no-decoration;
   @extend %relative;
 
   &:before {

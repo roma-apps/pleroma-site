@@ -4,3 +4,13 @@
 @import 'reset';
 @import 'fonts';
 @import 'header';
+@import 'hero';
+
+.main {
+  @extend %full-width;
+  @extend %margin-horizontal-center;
+
+  max-width: 71.25rem;
+  min-height: calc(100vh - 140px);
+  padding: 6.25rem 1rem 3.75rem;
+}
