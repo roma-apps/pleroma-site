@@ -22,6 +22,7 @@ Any use of Cookies – or of other tracking tools – by this Application or by 
 Users are responsible for any third-party Personal Data obtained, published or shared through this Application and confirm that they have the third party's consent to provide the Data to the Owner.
 
 ## Mode and place of processing the Data
+{{< divider >}}
 
 ### Methods of processing
 
@@ -65,12 +66,14 @@ The Owner may be allowed to retain Personal Data for a longer period whenever th
 Once the retention period expires, Personal Data shall be deleted. Therefore, the right to access, the right to erasure, the right to rectification and the right to data portability cannot be enforced after expiration of the retention period.
 
 ## The purposes of processing
+{{< divider >}}
 
 The Data concerning the User is collected to allow the Owner to provide its Services, as well as for the following purposes: Analytics, Hosting and backend infrastructure and Managing contacts and sending messages.
 
 Users can find further detailed information about such purposes of processing and about the specific Personal Data used for each purpose in the respective sections of this document.
 
 ## Detailed information on the processing of Personal Data
+{{< divider >}}
 
 Personal Data is collected for the following purposes and using the following services:
 
@@ -79,12 +82,14 @@ Personal Data is collected for the following purposes and using the following se
 * Managing contacts and sending messages
 
 ## Further information about Personal Data
+{{< divider >}}
 
 * Mastodon OAuth
 * The Service is not directed to children under the age of 13
 * Push notifications
 
 ## The rights of Users
+{{< divider >}}
 
 Users may exercise certain rights regarding their Data processed by the Owner.
 
@@ -110,6 +115,7 @@ Users must know that, however, should their Personal Data be processed for direc
 Any requests to exercise User rights can be directed to the Owner through the contact details provided in this document. These requests can be exercised free of charge and will be addressed by the Owner as early as possible and always within one month.
 
 ## Additional information about Data collection and processing
+{{< divider >}}
 
 ### Legal action
 

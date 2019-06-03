@@ -18,7 +18,7 @@
       <a href="{{ .Site.BaseURL }}#mobile" class="header__link">Mobile Apps</a>
       <a href="{{ .Site.BaseURL }}#desktop" class="header__link">Desktop Apps</a>
       <a href="{{ .Site.BaseURL }}#contact" class="header__link">Contact Us</a>
-      <a href='{{ "privacy" | absURL }}' class="header__link">Privacy Policy</a>
+      <a href='{{ "privacy" | absURL }}' class='header__link {{ if eq .Title "Pleroma Privacy Policy" }} current{{ end }}'>Privacy Policy</a>
     </nav>
   </div>
 </header>

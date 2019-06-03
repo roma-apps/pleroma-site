@@ -74,7 +74,6 @@ const watchFiles = () => {
   gulp.watch('assets/css/mixins.scss', critical);
   gulp.watch('assets/css/reset.scss', critical);
   gulp.watch('assets/css/variables.scss', critical);
-  gulp.watch('assets/css/header.scss', critical);
 }
 
 // Tasks

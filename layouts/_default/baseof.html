@@ -7,7 +7,7 @@
     {{ end }}
     {{ partial "footer.html" . }}
 
-    {{ $js := resources.Get "js/header-scroll.js" | minify }}
+    {{ $js := resources.Get "js/header.js" | minify }}
     <script src="{{ $js.Permalink }}"></script>
   </body>
 </html>
