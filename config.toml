@@ -4,6 +4,7 @@ enableRobotsTXT = "true"
 languageCode = "en-us"
 title = "Pleroma"
 subtitle = "Apps for Pleroma"
+copyright = "Pleroma.com - All Rights Reserved"
 
 FootnoteReturnLinkContents = "↩"
 disableKinds = ["taxonomy", "taxonomyTerm"]
