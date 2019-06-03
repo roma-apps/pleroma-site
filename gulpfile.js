@@ -1,10 +1,8 @@
 'use strict';
 
 // Load Plugins
-const autoprefixer = require('autoprefixer');
-const concat = require('gulp-concat-util');
-const cssnano = require('cssnano');
 const gulp = require('gulp');
+const gm = require('gulp-gm');
 const htmlbeautify = require('gulp-jsbeautifier');
 const htmlmin = require('gulp-htmlmin');
 const plumber = require('gulp-plumber');
@@ -15,15 +13,14 @@ const sass = require('gulp-sass');
 
 // Critical CSS
 const critical = () => {
-  const plugins = [autoprefixer({browsers: ['> 5%']}), cssnano()];
   return gulp
       .src('assets/css/critical.scss')
       .pipe(plumber())
       .pipe(sass().on('error', sass.logError))
-      .pipe(postcss(plugins))
+      .pipe(postcss())
       // wrap with style tags
-      .pipe(concat.header(`<style>`))
-      .pipe(concat.footer('</style>'))
+      .pipe(replace(/^/g, '<style>'))
+      .pipe(replace(/$/g, '</style>'))
       // convert it to an include file
       .pipe(
         rename({
@@ -33,6 +30,19 @@ const critical = () => {
       )
       // insert file
       .pipe(gulp.dest('layouts/partials'))
+}
+
+// Image Conversion
+const convert = () => {
+  return gulp
+    .src(['assets/img/*.jpg','assets/img/*.png'])
+    .pipe(plumber())
+    .pipe(
+      gm(function(gmfile) {
+        return gmfile.setFormat('webp');
+      })
+    )
+    .pipe(gulp.dest('assets/img'));
 }
 
 /*
@@ -68,6 +78,7 @@ const watchFiles = () => {
 }
 
 // Tasks
+gulp.task("convert", convert);
 gulp.task('critical', critical);
 gulp.task('fixHugo', fixHugo);
 
