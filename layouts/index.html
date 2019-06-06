@@ -8,7 +8,7 @@
       <ul class="hero__stores">
         <li class="stores__item">
           {{ $app := resources.Get "img/app-store.png" }}
-          <img src="{{ $.Permalink }}" alt="Apple App Store" class="stores__img" />
+          <img src="{{ $app.Permalink }}" alt="Apple App Store" class="stores__img" />
         </li>
         <li class="stores__item">
           {{ $play := resources.Get "img/play-store.png" }}
@@ -16,7 +16,7 @@
         </li>
         <li class="stores__item">
           <a href='{{ "#desktop" | relURL }}' class="button stores__button">
-            {{ $desk := resources.Get "img/desktop-icon.png" }}
+            {{ $desk := resources.Get "img/desktop-icon.svg" | minify }}
             <img src="{{ $desk.Permalink }}" aria-hidden="true" class="stores__icon" />
             <p class="stores__copy">Desktop App</p>
           </a>
@@ -40,16 +40,16 @@
           <p class="item__description">Switch between your accounts and instances with a single click.</p>
         </li>
         <li class="info__item">
-          {{ $img := resources.Get "img/notifications.svg" | minify }}
-          <img src="{{ $img.Permalink }}" class="item__icon"/>
-          <h3 class="item__title">Push Notifications</h3>
-          <p class="item__description">Enable instant push notifications using our lightning fast push servers.</p>
-        </li>
-        <li class="info__item">
           {{ $img := resources.Get "img/posts.svg" | minify }}
           <img src="{{ $img.Permalink }}" class="item__icon"/>
           <h3 class="item__title">Scheduled Posts</h3>
           <p class="item__description">You can even schedule your posts ahead of time!</p>
+        </li>
+        <li class="info__item">
+          {{ $img := resources.Get "img/notifications.svg" | minify }}
+          <img src="{{ $img.Permalink }}" class="item__icon"/>
+          <h3 class="item__title">Push Notifications</h3>
+          <p class="item__description">Enable instant push notifications using our lightning fast push servers.</p>
         </li>
         <li class="info__item">
           {{ $img := resources.Get "img/updates.svg" | minify }}
@@ -87,7 +87,7 @@
       </ul>
       {{ $webp := resources.Get "img/desktop.webp" }}
       {{ $img := resources.Get "img/desktop.jpg" }}
-      <picture class="img__wrap hero__side-graphic">
+      <picture class="img__wrap mobile__screenshot">
         <source srcset="{{ $webp.Permalink }}" type="image/webp">
         <source srcset="{{ $img.Permalink }}" type="image/jpg">
         <img src="{{ $img.RelPermalink }}" alt="Pleroma on Desktop screenshot." class="desktop__screenshot"/>

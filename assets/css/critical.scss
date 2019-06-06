@@ -3,7 +3,6 @@
 @import 'mixins';
 @import 'reset';
 @import 'fonts';
-@import 'hero';
 
 .main {
   @extend %full-width;
@@ -11,6 +10,7 @@
 
   max-width: 71.25rem;
   min-height: calc(100vh - 140px);
+  overflow: hidden;
   padding: 6.25rem 1rem 3.75rem;
 }
 
@@ -225,4 +225,98 @@
       color: $brand;
     }
   }
+}
+
+.main__hero {
+  @extend %content-center;
+  @extend %flex;
+  @extend %flex-column;
+  @extend %items-flex-start;
+  @extend %relative;
+
+  background-image: url('/img/map.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 6.25rem);
+  overflow-y: hidden;
+
+  .hero__title,
+  .hero__subtitle,
+  .hero__copy,
+  .hero__stores {
+    @extend %full-width;
+
+    margin: 0 auto 0 0;
+    max-width: 635px;
+  }
+
+  .hero__title {
+    color: $brand;
+    font-size: 4.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 3.5rem;
+    font-weight: lighter;
+    margin-top: 1rem;
+  }
+
+  .hero__stores {
+    @extend %content-flex-start;
+    @extend %flex;
+    @extend %flex-wrap;
+    @extend %items-center;
+
+    list-style: none;
+    margin: 0.5rem 0;
+    padding: 0;
+  }
+
+  .stores__item {
+    height: 65px;
+    margin: 0.4rem;
+  }
+
+  .stores__img {
+    height: 65px;
+    width: auto;
+  }
+
+  .stores__button {
+    @extend %content-space-around;
+    @extend %flex;
+    @extend %items-center;
+    @extend %no-decoration;
+
+    background-color: #000;
+    border-radius: 9px;
+    height: 65px;
+    padding: 1rem;
+    width: 180px;
+  }
+
+  .stores__icon {
+    height: 22px;
+    width: 23px;
+  }
+
+  .stores__copy {
+    color: $bg;
+    font-size: 1.2rem;
+  }
+
+}
+
+.hero__side-graphic {
+  @extend %absolute;
+  @extend %none;
+
+  height: 100vh;
+  // left: 50%;
+  // max-height: 985px;
+  // max-width: 1100px;
+  right: -300px;
+  top: 6.25rem;
+  width: 60vw;
 }

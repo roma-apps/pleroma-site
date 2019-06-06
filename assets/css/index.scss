@@ -6,6 +6,237 @@
   width: 3.125rem;
 }
 
+.main__mobile {
+  @extend %content-flex-start;
+  @extend %flex;
+  @extend %flex-column;
+  @extend %items-center;
+
+  background-color: hsl(0, 0%, 97%);
+  overflow: hidden;
+  padding: 3.75rem 0 0;
+
+  @include media-query-max(990px) {
+    padding-bottom: 3.75rem;
+  }
+
+  .mobile__info {
+    @extend %grid;
+    @extend %items-center;
+
+    grid-column-gap: 2rem;
+    grid-template-columns: minmax(1rem, 285px) 450px minmax(1rem, 285px);
+    grid-template-rows: repeat(2, 490px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include media-query-max(990px) {
+      grid-gap: 2rem 0;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 180px);
+      margin-top: 1rem !important;
+    }
+  }
+
+  .info__item {
+    @extend %content-flex-start;
+    @extend %flex;
+    @extend %flex-column;
+    @extend %full-width;
+
+    min-height: 260px;
+    max-width: 285px;
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      @extend %items-flex-end;
+
+      .item__title,
+      .item__description {
+        text-align: end;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      @extend %items-flex-start;
+
+      .item__title,
+      .item__description {
+        text-align: start;
+      }
+    }
+
+    &:nth-child(1) {
+      @include media-query-min(990px) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+    }
+
+    &:nth-child(2) {
+      @include media-query-min(990px) {
+        grid-column: 3/4;
+        grid-row: 1/2;
+      }
+    }
+
+    &:nth-child(3) {
+      @include media-query-min(990px) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+    }
+
+    &:nth-child(4) {
+      @include media-query-min(990px) {
+        grid-column: 3/4;
+        grid-row: 2/3;
+      }
+    }
+
+    @include media-query-max(990px) {
+      align-items: center !important;
+      height: 180px !important;
+      max-width: unset !important;
+      min-height: unset !important;
+      width: 100% !important;
+
+      .item__title,
+      .item__description {
+        text-align: center !important;
+      }
+    }
+  }
+
+  .item__icon {
+    height: 80px;
+    width: 80px;
+  }
+
+  .info__graphic {
+    @extend %content-center;
+    @extend %flex;
+    @extend %items-flex-end;
+
+    align-self: end;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 979px;
+
+    @include media-query-max(990px) {
+      display: none;
+    }
+  }
+
+  .info__img {
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    margin-top: auto;
+    min-width: 450px;
+    overflow: hidden;
+    width: 450px;
+  }
+}
+
+.main__desktop {
+  @extend %content-flex-start;
+  @extend %flex;
+  @extend %flex-column;
+  @extend %items-center;
+
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.4995040252429097) 0%), url('/img/desktop-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0;
+  overflow: hidden;
+  padding: 3.75rem 2rem 0;
+
+  .desktop__title,
+  .desktop__description {
+    color: $bg;
+  }
+
+  .desktop__description {
+    text-align: center;
+  }
+
+  .desktop__downloads {
+    @extend %content-flex-start;
+    @extend %flex;
+    @extend %flex-wrap;
+    @extend %full-width;
+    @extend %items-center;
+
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+    max-width: 580px;
+  }
+
+  .downloads__item,
+  .downloads__button {
+    height: 50px;
+    width: auto;
+  }
+
+  .downloads__item {
+    margin: 5px;
+  }
+
+  .downloads__button {
+    @extend %content-center;
+    @extend %flex;
+    @extend %items-center;
+
+    border-radius: 4px;
+    color: $bg;
+    padding: .8125rem 2rem;
+
+    &.downloads__button--mac {
+      background-color: #0081FF;
+      box-shadow: 0 5px 40px 0 rgba(0,129,255,.3);
+      width: 255px;
+    }
+
+    &.downloads__button--windows {
+      background-color: #ffad00;
+      box-shadow: 0 5px 40px 0 rgba(255,173,0,.3);
+      width: 295px;
+    }
+
+    @include media-query-max(700px) {
+      width: calc(100vw - 6rem) !important;
+    }
+  }
+
+  .button__icon {
+    height: 18px;
+    margin: 0 0.5rem;
+    max-width: 17px;
+    width: auto;
+  }
+
+  .button__description {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0.5rem;
+  }
+
+  .mobile__screenshot {
+    @extend %full-width;
+
+    margin-bottom: -430px;
+    max-width: 850px;
+
+    @include media-query-max(700px) {
+      margin-bottom: -35vw;
+    }
+  }
+}
+
 .main__contact {
   @extend %content-center;
   @extend %full-width;
