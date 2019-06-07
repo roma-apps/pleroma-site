@@ -8,10 +8,48 @@
   @extend %full-width;
   @extend %margin-horizontal-center;
 
-  max-width: 71.25rem;
   min-height: calc(100vh - 140px);
   overflow: hidden;
-  padding: 6.25rem 1rem 3.75rem;
+  padding: 4rem 0 0;
+
+  .main__contact {
+    background-color: $bg;
+  }
+  
+  .main__section {
+    @extend %content-center;
+    @extend %flex;
+    @extend %full-width;
+    @extend %items-center;
+
+    background-color: $bg;
+
+    &.main__section--hero {
+      @extend %relative;
+
+      background-image: url('/img/map.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      overflow: hidden;
+    }
+
+    &.main__section--mobile {
+      background-color: hsl(0, 0%, 97%);
+    }
+
+    &.main__section--desktop {
+      background: rgb(255,255,255);
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.4995040252429097) 0%);
+      background-blend-mode: overlay;
+    }
+  }
+
+  .section__inner {
+    @extend %full-width;
+
+    max-width: 71.25rem;
+  }
 }
 
 .header,
@@ -227,6 +265,30 @@
   }
 }
 
+.desktop__background {
+  @extend %fixed;
+  @extend %content-center;
+  @extend %flex;
+  @extend %full-width;
+  @extend %items-center;
+
+  height: 90vh;
+  left: 0;
+  max-height: 100vh;
+  min-height: 800px;
+  overflow: hidden;
+  right: 0;
+  top: 50vh;
+  z-index: -1;
+
+  .background__img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+  }
+}
+
 .main__hero {
   @extend %content-center;
   @extend %flex;
@@ -234,12 +296,10 @@
   @extend %items-flex-start;
   @extend %relative;
 
-  background-image: url('/img/map.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: calc(100vh - 6.25rem);
+  min-height: calc(100vh - 4rem);
   overflow-y: hidden;
+  padding: 2.25rem 2rem 0;
+  z-index: 5;
 
   .hero__title,
   .hero__subtitle,
@@ -274,13 +334,25 @@
   }
 
   .stores__item {
+    @include transition(height);
+
     height: 65px;
     margin: 0.4rem;
+
+    @include media-query-max(700px) {
+      height: 45px;
+    }
   }
 
   .stores__img {
+    @include transition(height);
+
     height: 65px;
     width: auto;
+
+    @include media-query-max(700px) {
+      height: 45px;
+    }
   }
 
   .stores__button {
@@ -289,11 +361,18 @@
     @extend %items-center;
     @extend %no-decoration;
 
+    @include transition(all);
+
     background-color: #000;
     border-radius: 9px;
     height: 65px;
     padding: 1rem;
     width: 180px;
+    
+    @include media-query-max(700px) {
+      height: 45px;
+      width: 160px;
+    }
   }
 
   .stores__icon {
@@ -308,15 +387,61 @@
 
 }
 
+
+@keyframes bounceInRight {
+  0%, 60%, 75%, 90%,to {
+    animation-timing-function: cubic-bezier(.215,.61,.355,1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(3000px,0,0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px,0,0);
+  }
+
+  75% {
+    transform: translate3d(10px,0,0);
+  }
+
+  90% {
+    transform: translate3d(-5px,0,0);
+  }
+
+  to {
+    transform: translateZ(0);
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+  @media (prefers-reduced-motion:reduce),(print) {
+    animation-duration: 1ms!important;
+    animation-iteration-count: 1!important;
+    transition-duration: 1ms!important;
+  }
+}
+
 .hero__side-graphic {
   @extend %absolute;
-  @extend %none;
 
+  @include transition(all);
+
+  animation-name: bounceInRight;
   height: 100vh;
-  // left: 50%;
-  // max-height: 985px;
-  // max-width: 1100px;
+  min-height: 615px;
   right: -300px;
   top: 6.25rem;
   width: 60vw;
+
+  @include media-query-max(1025px) {
+    height: 38rem;
+    top: 4rem;
+    width: 38rem;
+  }
 }

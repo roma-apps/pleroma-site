@@ -125,7 +125,7 @@ p {
   display: none !important;
 }
 
-[disabled] {
+.disabled {
   cursor: not-allowed;
 }
 
@@ -140,11 +140,14 @@ p {
   border-radius: 4px;
   box-shadow: $shadow;
   color: $bg;
-  cursor: pointer;
   font-size: 1.1rem;
   min-height: 46px;
   min-width: 130px;
   outline: none;
+
+  &.active {
+    cursor: pointer;
+  }
 }
 
 .sr-only {

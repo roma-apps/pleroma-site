@@ -12,9 +12,8 @@
   @extend %flex-column;
   @extend %items-center;
 
-  background-color: hsl(0, 0%, 97%);
   overflow: hidden;
-  padding: 3.75rem 0 0;
+  padding: 3.75rem 2rem 0;
 
   @include media-query-max(990px) {
     padding-bottom: 3.75rem;
@@ -23,6 +22,8 @@
   .mobile__info {
     @extend %grid;
     @extend %items-center;
+
+    @include transition(all);
 
     grid-column-gap: 2rem;
     grid-template-columns: minmax(1rem, 285px) 450px minmax(1rem, 285px);
@@ -145,12 +146,8 @@
   @extend %flex;
   @extend %flex-column;
   @extend %items-center;
+  @extend %relative;
 
-  background: rgb(255,255,255);
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.4995040252429097) 0%), url('/img/desktop-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 0;
   overflow: hidden;
   padding: 3.75rem 2rem 0;
 
@@ -191,6 +188,8 @@
     @extend %flex;
     @extend %items-center;
 
+    @include transition(width);
+
     border-radius: 4px;
     color: $bg;
     padding: .8125rem 2rem;
@@ -225,14 +224,14 @@
     margin: 0 0.5rem;
   }
 
-  .mobile__screenshot {
+  .desktop__screenshot {
     @extend %full-width;
 
-    margin-bottom: -430px;
+    margin-bottom: -220px;
     max-width: 850px;
 
     @include media-query-max(700px) {
-      margin-bottom: -35vw;
+      margin-bottom: -25vw;
     }
   }
 }
@@ -244,7 +243,7 @@
   @extend %flex-column;
   @extend %items-center;
 
-  padding: 3.75rem 0 0;
+  padding: 3.75rem 0;
 
   .contact__form {
     @extend %content-center;
@@ -271,6 +270,10 @@
       'message'
       'button';
     }
+  }
+
+  .honey__hidden {
+    @extend %none;
   }
 
   .form__group {
@@ -301,8 +304,22 @@
 
     border: 2px solid #eaeaea;
     border-radius: 0.25rem;
+    font-family: 'Titillium', sans-serif;
     height: 37px;
     min-height: 37px;
+    padding: 0.5rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:invalid {
+      border-color: #eaeaea;
+    }
+
+    &:valid {
+      border-color: rgba($brand, 0.5);
+    }
   }
 
   .contact__input--textarea {
@@ -338,8 +355,12 @@
     grid-area: button;
     width: 130px;
 
-    &:hover {
-      background-color: darken($brand, 15%);
+    &.active {
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($brand, 15%);
+      }
     }
   }
 }
