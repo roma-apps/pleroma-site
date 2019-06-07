@@ -30,7 +30,7 @@
       background-image: url('/img/map.png');
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: auto 50vh;
       overflow: hidden;
     }
 
@@ -322,6 +322,10 @@
     margin-top: 1rem;
   }
 
+  .hero__copy {
+    font-size: 17px;
+  }
+
   .hero__stores {
     @extend %content-flex-start;
     @extend %flex;
@@ -441,7 +445,7 @@
 
   @include media-query-max(1025px) {
     height: 38rem;
-    top: 4rem;
+    top: 1.5rem;
     width: 38rem;
   }
 }
