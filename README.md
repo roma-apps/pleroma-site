@@ -1,4 +1,6 @@
 # Pleroma
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6af91924-c9d0-4fad-b7c9-136da4d8535f/deploy-status)](https://app.netlify.com/sites/pleroma/deploys)
+
 For a more comprehensive help regarding how to use Hugo, you can check out their extensive [documentation](https://gohugo.io/wiki/) or ask for help in their friendly [community](https://discourse.gohugo.io).
 
 ```

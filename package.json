@@ -23,6 +23,7 @@
     "eslint-plugin-react-hooks": "^1.5.0",
     "gulp": "^4.0.0",
     "gulp-gm": "0.0.9",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-jsbeautifier": "^3.0.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
@@ -38,8 +39,5 @@
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^4.1.0",
     "postcss-simple-vars": "^5.0.1"
-  },
-  "dependencies": {
-    "gulp-htmlmin": "^5.0.1"
   }
 }
