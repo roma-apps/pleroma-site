@@ -12,17 +12,6 @@
 @font-face {
   font-display: swap;
   font-family: 'Titillium';
-  font-weight: 400;
-  font-style: italic;
-  src: local(Titillium-Italic),
-       local(Titillium-Italic),
-       url('/fonts/Titillium-Italic.woff2') format('woff2'),
-       url('/fonts/Titillium-Italicwoff') format('woff');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Titillium';
   font-weight: 700;
   font-style: bold;
   src: local(Titillium-Bold),

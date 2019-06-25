@@ -3,7 +3,7 @@
   <meta charset="utf-8" />
   <base href="{{ .Site.BaseURL }}">
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ if .Params.heading }}{{ .Params.heading }} | {{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}{{ end }}</title>
-  <meta name="description" content="{{ .Site.Params.meta.description }}">
+  <meta name="description" content="{{ .Site.Params.description }}">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=5.0,viewport-fit=cover">
   <meta name="theme-color" content="#6CB23D">
 
@@ -16,10 +16,6 @@
   <link rel="preload" href="{{ $tit2.Permalink }}" as="font" type="font/woff2" crossorigin>
   {{ $tit := resources.Get "fonts/Titillium-Regular.woff" }}
   <link rel="preload" href="{{ $tit.Permalink }}" as="font" type="font/woff" crossorigin>
-  {{ $titi2 := resources.Get "fonts/Titillium-Italic.woff2" }}
-  <link rel="preload" href="{{ $titi2.Permalink }}" as="font" type="font/woff2" crossorigin>
-  {{ $titi := resources.Get "fonts/Titillium-Italic.woff" }}
-  <link rel="preload" href="{{ $titi.Permalink }}" as="font" type="font/woff" crossorigin>
   {{ $titb2 := resources.Get "fonts/Titillium-Bold.woff2" }}
   <link rel="preload" href="{{ $titb2.Permalink }}" as="font" type="font/woff2" crossorigin>
   {{ $titb := resources.Get "fonts/Titillium-Bold.woff" }}

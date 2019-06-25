@@ -41,39 +41,41 @@
     </section>
     <section id="mobile" class="main__section main__section--mobile">
       <div class="section__inner main__mobile">
-        <h2 class="mobile__title">About thr Roma Apps</h2>
+        <h2 class="mobile__title">About the Roma Apps</h2>
         <ul class="mobile__info">
           <li class="info__item">
             {{ $img := resources.Get "img/accounts.svg" | minify }}
-            <img src="{{ $img.Permalink }}" class="item__icon"/>
+            <img src="{{ $img.Permalink }}" alt="Multiple Account Support" class="item__icon"/>
             <h3 class="item__title">Multiple Account Support</h3>
             <p class="item__description">Switch between your accounts and instances with a single click.</p>
           </li>
           <li class="info__item">
             {{ $img := resources.Get "img/posts.svg" | minify }}
-            <img src="{{ $img.Permalink }}" class="item__icon"/>
+            <img src="{{ $img.Permalink }}" alt="Scheduled Posts" class="item__icon"/>
             <h3 class="item__title">Scheduled Posts</h3>
             <p class="item__description">You can even schedule your posts ahead of time!</p>
           </li>
           <li class="info__item">
             {{ $img := resources.Get "img/notifications.svg" | minify }}
-            <img src="{{ $img.Permalink }}" class="item__icon"/>
+            <img src="{{ $img.Permalink }}" alt="Push Notifications" class="item__icon"/>
             <h3 class="item__title">Push Notifications</h3>
             <p class="item__description">Enable instant push notifications using our lightning fast push servers.</p>
           </li>
           <li class="info__item">
             {{ $img := resources.Get "img/updates.svg" | minify }}
-            <img src="{{ $img.Permalink }}" class="item__icon"/>
+            <img src="{{ $img.Permalink }}" alt="Amazing Updates" class="item__icon"/>
             <h3 class="item__title">Amazing Updates</h3>
             <p class="item__description">All our Apps are being updated and made better every single day!</p>
           </li>
           {{ $webp := resources.Get "img/phone.webp" }}
           {{ $img := resources.Get "img/phone.jpg" }}
-          <picture class="img__wrap info__graphic">
-            <source srcset="{{ $webp.Permalink }}" type="image/webp">
-            <source srcset="{{ $img.Permalink }}" type="image/jpg">
-            <img src="{{ $img.RelPermalink }}" alt="Pleroma on mobile." class="info__img"/>
-          </picture>
+          <li class="info__graphic">
+            <picture class="img__wrap">
+              <source srcset="{{ $webp.Permalink }}" type="image/webp">
+              <source srcset="{{ $img.Permalink }}" type="image/jpg">
+              <img src="{{ $img.RelPermalink }}" alt="Pleroma on mobile." class="info__img"/>
+            </picture>
+          </li>
         </ul>
       </div>
     </section>

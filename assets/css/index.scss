@@ -125,9 +125,16 @@
     grid-column: 2/3;
     grid-row: 1/3;
     height: 979px;
+    margin: 0;
 
     @include media-query-max(990px) {
       display: none;
+    }
+
+    .img__wrap {
+      @extend %content-center;
+      @extend %flex;
+      @extend %items-flex-end;
     }
   }
 
