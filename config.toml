@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://www.pleroma.com"
 enableEmoji = "true"
 enableRobotsTXT = "true"
 languageCode = "en-us"
@@ -11,9 +11,6 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [permalinks]
   blog = "/:title/"
-
-[author]
-  name = ""
 
 [blackfriday]
   hrefTargetBlank = true
