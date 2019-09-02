@@ -177,7 +177,7 @@
     list-style: none;
     margin: 1.5rem 0;
     padding: 0;
-    max-width: 580px;
+    max-width: 925px;
   }
 
   .downloads__item,
@@ -211,6 +211,12 @@
       background-color: #ffad00;
       box-shadow: 0 5px 40px 0 rgba(255,173,0,.3);
       width: 295px;
+    }
+
+    &.downloads__button--linux {
+      background-color: #6cd33d;
+      box-shadow: 0 5px 40px 0 rgba(108,211,61,.3);
+      width: 345px;
     }
 
     @include media-query-max(700px) {
@@ -259,7 +265,7 @@
     @extend %items-center;
 
     grid-gap: 1.1rem;
-    grid-template-areas: 
+    grid-template-areas:
     'first last message message'
     'email email message message'
     'subject subject message message'
@@ -269,7 +275,7 @@
     max-width: 917px;
 
     @include media-query-max(930px) {
-      grid-template-areas: 
+      grid-template-areas:
       'first'
       'last'
       'email'
